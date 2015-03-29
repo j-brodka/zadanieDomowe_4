@@ -116,6 +116,8 @@ void czas1(int)
 	{
 		gracz1.setShootX(-gracz1.showShootX());
 		gracz1.setShootY(-gracz1.showShootY());
+		pocisk1_poz.x-=pocisk1_poz.x;
+		pocisk1_poz.y-=pocisk1_poz.y;
 		t1=0;
 
 	}
@@ -149,6 +151,8 @@ void czas2(int)
 	{
 		gracz2.setShootX(-gracz2.showShootX());
 		gracz2.setShootY(-gracz2.showShootY());
+		pocisk2_poz.x-=pocisk2_poz.x;
+		pocisk2_poz.y-=pocisk2_poz.y;
 		t2=0;
 	}
 	else if(pocisk2_poz.x<=(gracz1_poz.x+0.15) && pocisk2_poz.x>=(gracz1_poz.x-0.4))
