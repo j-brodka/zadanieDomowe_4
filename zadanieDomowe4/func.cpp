@@ -324,3 +324,22 @@ void display(void)
 	glutSwapBuffers();
 }
 
+void resize(int width, int height)
+{
+	const float ar = (float)width / (float)height;
+
+	glViewport(0, 0, width, height);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glFrustum(-ar, ar, -1.0, 1.0, 2.0, 100.0);
+	gluLookAt(0, 0, 5, 0, 0, 0, 0, 1, 0);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+}
+
+void idle(void)
+{
+	glutPostRedisplay();
+}

@@ -43,6 +43,8 @@ void czas2(int value);
 void display(void);
 void DrawZiemia(void);
 void sterowanie(unsigned char key, int x, int y);
+void resize(int width, int height);
+void idle(void);
 
 void inicjacja1();
 void inicjacja2();
